@@ -1,0 +1,13 @@
+#!/bin/bash
+
+git clone https://github.com/dsw49569/Lab4.git
+
+repo_path=$(pwd)/Lab4
+
+if [[ ":$PATH:" != *":$repo_path:"* ]]; then
+    echo "export PATH=\$PATH:$repo_path" >> ~/.bashrc
+    source ~/.bashrc
+    echo "Dodano ścieżkę do repozytorium w PATH."
+else
+    echo "Ścieżka do repozytorium już jest ustawiona w PATH."
+fi
