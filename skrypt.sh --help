@@ -1,0 +1,6 @@
+#!/bin/bash
+
+command="nazwa_komendy"  # ZAMIEŃ "nazwa_komendy" NA WŁAŚCIWĄ KOMENDĘ
+
+# Wyświetlanie wszystkich dostępnych opcji --help
+$command --help | less
