@@ -1,17 +1,9 @@
 #!/bin/bash
 
-create_log_files() {
-    for i in {1..100}
-    do
-        echo "${i} $(date) skrypt.sh" > logs$i.txt
-    done
-}
-
-for var in "$@"
+for ((i=1; i<=100; i++))
 do
-    if [ $var == "--date" ]; then
-        date
-    elif [ $var == "--logs" ]; then
-        create_log_files
-    fi
+  filename="log${i}.txt"
+  echo "Nazwa pliku: $filename" > "$filename"
+  echo "Nazwa skryptu: $0" >> "$filename"
+  echo "Data: $(date)" >> "$filename"
 done
