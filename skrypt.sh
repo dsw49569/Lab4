@@ -1,5 +1,4 @@
 #!/bin/bash
 
-if [ $1 == "--date" ]; then
-  date
-fi
+current_date=$(date +%Y-%m-%d)
+echo "Dzisiejsza data: $current_date"
